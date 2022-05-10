@@ -1,0 +1,22 @@
+[
+    {
+        "merchant_id": "c20b237a-da94-40cd-b85f-6a359b656929",
+        "merchant_name": "Facebook"
+    },
+    {
+        "merchant_id": "30650d28-8ebf-454d-940b-27f7518b4550",
+        "merchant_name": "Intercom"
+    },
+    {
+        "merchant_id": "e77f4752-132f-412f-80ed-262a364207a0",
+        "merchant_name": "Woolworths"
+    },
+    {
+        "merchant_id": "358d3c29-fae2-409d-8cdd-de59a377b443",
+        "merchant_name": "Google"
+    },
+    {
+        "merchant_id": "6a31ef8c-51d0-4cf1-9e8a-18f72e50d882",
+        "merchant_name": "Hubspot"
+    }
+]
