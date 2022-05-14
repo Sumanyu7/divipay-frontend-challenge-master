@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import categories from '../data/categories.json';
 
@@ -16,36 +16,32 @@ const Select = styled.select`
     margin: 0 5px 5px 0;
 `;
 
-class Row extends Component{
-    render(){
-        const transaction = this.props.transaction;
-        const item = this.props.item;
-    
+const Row = (props) => {
         return(
             <Tr>
-                <Td>{item+1}</Td>
-                <Td>{transaction.merchant_name}</Td>
+                <Td>{props.item+1}</Td>
+                <Td>{props.transaction.merchant_name}</Td>
                 <Td>
-                    <Select defaultValue={transaction.category_name}> {categories.map((category)=>{
+                    <Select defaultValue={props.transaction.category_name}> {categories.map((category)=>{
                         return(
                             <option key={category.category_id}>{category.category_name}</option>    
                         )})} 
                     </Select>
                 </Td>
-                <Td>{transaction.status}</Td>
-                <Td>{transaction.date.slice(0,10)}</Td>
-                <Td>{transaction.budget}</Td>
-                <Td>{transaction.team_member}</Td>
-                <Td>${transaction.gst}</Td>
-                <Td>${transaction.amount}</Td>
+                <Td>{props.transaction.status}</Td>
+                <Td>{props.transaction.date.slice(0,10)}</Td>
+                <Td>{props.transaction.budget}</Td>
+                <Td>{props.transaction.team_member}</Td>
+                <Td>${props.transaction.gst}</Td>
+                <Td>${props.transaction.amount}</Td>
                 <Td>
-                    <input type="checkbox" defaultChecked={transaction.receipt} disabled/>
+                    <input type="checkbox" defaultChecked={props.transaction.receipt} disabled/>
                 </Td>
                 <Td>
-                    <input type="checkbox" defaultChecked={transaction.billable} />
+                    <input type="checkbox" defaultChecked={props.transaction.billable} />
                 </Td>
             </Tr>
-        )}
+        )
 }
 
 
